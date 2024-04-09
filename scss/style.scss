@@ -1,0 +1,119 @@
+html {
+  background: #eef0fe;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+table {
+  border-collapse: collapse;
+}
+td {
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.hidden {
+  display: none !important; 
+}
+
+.header {
+  background: white;
+  box-shadow: #4444442f 0px 5px 10px 5px;
+}
+
+.header__title {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main__block {
+  margin-top: 25px;
+}
+
+.main__section {
+  background: white;
+  border-radius: 15px;
+  margin: 8px;
+}
+.main__title {
+  color: #225f91;
+  font-size: min(4.2vw, 18px);
+  padding: 15px;
+  position: relative;
+}
+.main__button {
+  width: 0;
+  height: 0;
+  border-left: min(3vw, 11px) solid transparent;
+  border-right: min(3vw, 11px) solid transparent;
+  border-top: min(3vw, 11px) solid black;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main__grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+  align-items: center;
+}
+.main__gridBlock {
+  background: linear-gradient(135deg, #146678, #019eac);
+  color: white;
+  margin: 4px;
+  border-radius: 15px;
+}
+.main__gridTitle {
+  font-size: min(3.75vw, 15px);
+  padding: 10px;
+  padding-top: 40px;
+}
+
+.main__list-section {
+  padding: 0 15px;
+  padding-bottom: 0;
+  .main__title {
+    padding: 15px 0px;
+  }
+} 
+
+.main__listButton {
+  right: -10px;
+}
+.main__table {
+  display: inline-table;
+  width: 100%;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #2fa4be3a, #d5fbff3a);
+}
+
+.footer {
+  width: 100%;
+  margin-top: 10px;
+}
+.footer__list {
+  display: flex;
+  background: white;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+}
+
+.main__button--active {
+  border-bottom: min(3vw, 11px) solid black;
+  border-top: 0;
+}
