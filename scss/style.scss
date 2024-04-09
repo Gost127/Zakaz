@@ -86,6 +86,7 @@ td {
 .main__list-section {
   padding: 0 15px;
   padding-bottom: 0;
+  display: block;
   .main__title {
     padding: 15px 0px;
   }
@@ -95,9 +96,9 @@ td {
   right: -10px;
 }
 .main__table {
-  display: inline-table;
-  width: 100%;
-  margin-bottom: 15px;
+  display: table;
+  width: 90%;
+  margin: 45px auto 0 auto;
   background: linear-gradient(135deg, #2fa4be3a, #d5fbff3a);
 }
 

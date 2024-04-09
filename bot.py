@@ -1,6 +1,8 @@
 
 import telebot
 import sqlite3
+from aiogram import  Bot,Dispatcher,types
+from aiogram.types.web_app_info import WebAppInfo
 
 name = None
 klass = None
@@ -44,10 +46,7 @@ def user_points(message) :
     cur.close()
     conn.close()
 
-    markup = telebot.types.InlineKeyboardMarkup()
-    markup.add(telebot.types.InlineKeyboardButton("Список пользователей", callback_data="markup"))
-    
-    bot.send_message(message.chat.id, 'Вот ссылка на список пользователей', reply_markup=markup)
+    # bot.send_message(message.chat.id, 'Вот ссылка на список пользователей', reply_markup=markup)
     
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call):
@@ -69,7 +68,9 @@ def callback(call):
     cur.close()
     conn.close()
 
-
-
+async def user_points(message= types.Message):
+    markup = types.ReplyKeyboardMarkup()
+    markup.add(types.keyboard_button("Открыть сайт", web_app=WebAppInfo(url="https://www.youtube.com/watch?v=y65BZbNB0YA&list=LL&index=23")))
+    await message.answer("Вот сайт", reply_markup=markup)
 
 bot.infinity_polling()
